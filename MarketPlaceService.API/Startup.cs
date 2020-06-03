@@ -141,9 +141,12 @@ namespace MarketPlaceService.API
             Log.Information("web api service is started.");
 
             services.AddScoped<IProfileService, ProfileService>();
+            services.AddScoped<ISiteService, SiteService>();
+
 
             // Dependency resolutuon for repositories
             services.AddScoped<IPublisherRepository, PublisherRepository>();
+            services.AddScoped<ISiteRepository, SiteRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

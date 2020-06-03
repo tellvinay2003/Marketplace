@@ -30,5 +30,15 @@ namespace MarketPlaceService.BLL
             _logger.LogInformation("Execution Time of GetPublisherById repository call is: {duration}ms", watch.ElapsedMilliseconds);
             return result;
         }
+
+        public Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync(int pageNumber, int pageSize)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

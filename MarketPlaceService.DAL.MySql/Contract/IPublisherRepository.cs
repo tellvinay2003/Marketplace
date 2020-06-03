@@ -13,6 +13,7 @@ namespace MarketPlaceService.DAL.MySql.Contract
         Task<PublisherDataModel> GetPublisherByIdAsync(Guid id);
         Task<bool> UpdateCarAsync(PublisherDbEntity publisher);
         Task<bool> DeleteCarAsync(Guid id);
-        Task<IEnumerable<PublisherDbEntity>> GetPublisherListAsync(int pageNumber, int pageSize);
+        Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync(int pageNumber, int pageSize);
+        Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync();
     }
 }

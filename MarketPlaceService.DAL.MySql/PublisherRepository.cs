@@ -41,7 +41,12 @@ namespace MarketPlaceService.DAL.MySql
             return await Task.FromResult(publisherDataModel);
         }
 
-        public Task<IEnumerable<PublisherDbEntity>> GetPublisherListAsync(int pageNumber, int pageSize)
+        public Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync(int pageNumber, int pageSize)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync()
         {
             throw new NotImplementedException();
         }

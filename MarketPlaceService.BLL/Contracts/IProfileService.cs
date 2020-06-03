@@ -9,5 +9,7 @@ namespace MarketPlaceService.BLL.Contracts
    public interface IProfileService
     {
         Task<PublisherDataModel> GetPublisherById(Guid id);
+        Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync(int pageNumber, int pageSize);
+        Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync();
     }
 }

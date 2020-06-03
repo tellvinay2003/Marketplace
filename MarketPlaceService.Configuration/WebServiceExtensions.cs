@@ -35,7 +35,6 @@ namespace Microsoft.Extensions.DependencyInjection
             }
 
             var bllSettings = BLLOptionsSection.Get<PublisherBLLOptions>();
-
             services.Configure<PublisherBLLOptions>(opt =>
             {
                 opt.JwtSecretKey = BLLOptionsSection.GetValue<string>("JwtSecretKey");
@@ -48,7 +47,7 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
             services.TryAddSingleton<IPublisherRepository, PublisherRepository>();
-
+            services.TryAddSingleton<ISiteRepository, SiteRepository>();
             services.TryAddScoped<IJwtTokenService, JwtTokenService>();
 
             services.AddHttpClient();

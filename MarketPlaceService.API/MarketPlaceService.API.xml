@@ -37,6 +37,12 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:MarketPlaceService.API.Controllers.SiteController.GetRegisteredSites">
+            <summary>
+            Get list of all publishers
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:MarketPlaceService.API.Controllers.TokenController.GenerateToken">
             <summary>
             Generate sample token

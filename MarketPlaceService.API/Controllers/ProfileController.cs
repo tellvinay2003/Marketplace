@@ -47,6 +47,22 @@ namespace MarketPlaceService.API.Controllers
             return Ok();
         }
 
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="pageNumber"></param>
+        ///// <param name="pageSize"></param>
+        ///// <returns></returns>
+        //[HttpGet("")]
+        //[SwaggerResponse((int)HttpStatusCode.OK, Description = "Returns 200")]
+        //// [SwaggerResponse((int)HttpStatusCode.BadRequest, Description = "Missing or invalid id")]
+        //[SwaggerResponse((int)HttpStatusCode.InternalServerError, Description = "Unexpected error")]
+        //public async Task<IActionResult> GetRegisteredPublishers(int pageNumber, int pageSize)
+        //{
+        //    return Ok();
+        //}
+
+
         /// <summary>
         /// Get specific publisher details by PublisherId
         /// </summary>

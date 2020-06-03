@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MarketPlaceService.API</name>
+    </assembly>
+    <members>
+        <member name="M:MarketPlaceService.API.Controllers.ProfileController.GetRegisteredPublishers">
+            <summary>
+            Get list of all publishers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.ProfileController.GetPublisherById(System.Guid)">
+            <summary>
+            Get specific publisher details by PublisherId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.ProfileController.AddNewPublisher">
+            <summary>
+            Create new publisher
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.ProfileController.UpdatePublisher(System.Guid)">
+            <summary>
+            Update existing publisher details by PublisherId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.ProfileController.DeletePublisher(System.Guid)">
+            <summary>
+            Delete existing publisher by PublisherId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.TokenController.GenerateToken">
+            <summary>
+            Generate sample token
+            </summary>       
+            <returns>Generated token</returns>        
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.TokenController.ValidateToken(System.String)">
+            <summary>
+            Validate sample token
+            </summary>
+            <param name="token">Token for validation</param>
+            <returns>Token validation status</returns>        
+        </member>
+    </members>
+</doc>

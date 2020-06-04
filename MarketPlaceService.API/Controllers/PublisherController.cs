@@ -20,14 +20,14 @@ namespace MarketPlaceService.API.Controllers
     //[Authorize]
     // [Route("api/[controller]")]
     [Produces("application/json")]
-    [Route("api/v{version:apiVersion}/profile")]
+    [Route("api/v{version:apiVersion}/publisher")]
     [ApiVersion("1.0")]
     [ApiController]
-    public class ProfileController : ControllerBase
+    public class PublisherController : ControllerBase
     {
-        readonly ILogger<ProfileController> _logger;
+        readonly ILogger<PublisherController> _logger;
         readonly IProfileService _profileService;
-        public ProfileController(IProfileService profileService, ILogger<ProfileController> logger)
+        public PublisherController(IProfileService profileService, ILogger<PublisherController> logger)
         {
             _logger = logger;
             _profileService = profileService;

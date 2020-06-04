@@ -1,0 +1,9 @@
+2020-06-04T13:45:04.8147174+05:30  [INF] User profile is available. Using '"C:\Users\vinay\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-06-04T13:45:05.3967705+05:30 80000013-0003-ef00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-04T13:45:06.4658323+05:30 80000013-0003-ef00-b63f-84710c7967bb [INF] Request finished in 1102.8002ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-04T13:45:07.1459290+05:30 80000014-0003-ef00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-04T13:45:07.7641373+05:30 80000014-0003-ef00-b63f-84710c7967bb [INF] Request finished in 662.7104ms 200 application/json;charset=utf-8 (791a596a)
+2020-06-04 13:45:59.196 +05:30 [Information] web api service is started.
+2020-06-04 13:46:04.545 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 1647.3728 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:""][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"]
+2020-06-04 13:46:05.676 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 467.0016 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"]
+2020-06-04 13:46:27.254 +05:30 [Information] HTTP "GET" "/api/v1/publisher/b3d27f9b-d21d-327c-164e-7fb6776f87b0" responded 200 in 3355.2364 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"]

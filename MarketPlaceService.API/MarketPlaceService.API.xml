@@ -4,33 +4,33 @@
         <name>MarketPlaceService.API</name>
     </assembly>
     <members>
-        <member name="M:MarketPlaceService.API.Controllers.ProfileController.GetRegisteredPublishers">
+        <member name="M:MarketPlaceService.API.Controllers.PublisherController.GetRegisteredPublishers">
             <summary>
             Get list of all publishers
             </summary>
             <returns></returns>
         </member>
-        <member name="M:MarketPlaceService.API.Controllers.ProfileController.GetPublisherById(System.Guid)">
+        <member name="M:MarketPlaceService.API.Controllers.PublisherController.GetPublisherById(System.Guid)">
             <summary>
             Get specific publisher details by PublisherId
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:MarketPlaceService.API.Controllers.ProfileController.AddNewPublisher(MarketPlaceService.Entities.PublisherDataModel)">
+        <member name="M:MarketPlaceService.API.Controllers.PublisherController.AddNewPublisher(MarketPlaceService.Entities.PublisherDataModel)">
             <summary>
             Create new publisher
             </summary>
             <returns></returns>
         </member>
-        <member name="M:MarketPlaceService.API.Controllers.ProfileController.UpdatePublisher(System.Guid)">
+        <member name="M:MarketPlaceService.API.Controllers.PublisherController.UpdatePublisher(System.Guid)">
             <summary>
             Update existing publisher details by PublisherId
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:MarketPlaceService.API.Controllers.ProfileController.DeletePublisher(System.Guid)">
+        <member name="M:MarketPlaceService.API.Controllers.PublisherController.DeletePublisher(System.Guid)">
             <summary>
             Delete existing publisher by PublisherId
             </summary>

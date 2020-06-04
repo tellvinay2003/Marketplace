@@ -21,6 +21,16 @@ namespace MarketPlaceService.BLL
             _logger = logger;
         }
 
+        public Task<PublisherDataModel> AddNewPublisher(PublisherDataModel publisherItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PublisherDataModel> DeletePublisher(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<PublisherDataModel> GetPublisherById(Guid id)
         {
             _logger.LogInformation("Repository call for GetPublisherById started");
@@ -37,6 +47,11 @@ namespace MarketPlaceService.BLL
         }
 
         public Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PublisherDataModel> UpdatePublisher(Guid id)
         {
             throw new NotImplementedException();
         }

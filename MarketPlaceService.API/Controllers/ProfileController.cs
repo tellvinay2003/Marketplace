@@ -40,11 +40,30 @@ namespace MarketPlaceService.API.Controllers
         // [HttpGet("GetAll")]
         [HttpGet("")]
         [SwaggerResponse((int)HttpStatusCode.OK, Description = "Returns 200")]
-        // [SwaggerResponse((int)HttpStatusCode.BadRequest, Description = "Missing or invalid id")]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Description = "Unexpected error")]
         public async Task<IActionResult> GetRegisteredPublishers()
         {
-            return Ok();
+            _logger.LogInformation("GetPublisherById is called.");
+            Response<IEnumerable<PublisherDataModel>> response = new Response<IEnumerable<PublisherDataModel>>();
+            try
+            {
+                _logger.LogInformation("Publisher service is called.");
+                var watch = Stopwatch.StartNew();
+                // Service call
+                var result = await _profileService.GetPublishersListAsync();
+                watch.Stop();
+                _logger.LogInformation("Execution Time of Publisher service for GetRegisteredPublishers call is: {duration}ms", watch.ElapsedMilliseconds);
+                response = new Response<IEnumerable<PublisherDataModel>> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                _logger.LogInformation("GetRegisteredPublishers executed successfully.");
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                response = new Response<IEnumerable<PublisherDataModel>> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                return BadRequest(response);
+            }
         }
 
         ///// <summary>
@@ -105,13 +124,32 @@ namespace MarketPlaceService.API.Controllers
         /// </summary>
         /// <returns></returns>
         // [HttpPost("CreatePublisher")]
-        [HttpPost("{id}")]
+        [HttpPost("")]
         [SwaggerResponse((int)HttpStatusCode.OK, Description = "Returns 200")]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest, Description = "Missing or invalid Publisher id")]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Description = "Unexpected error")]
-        public async Task<IActionResult> AddNewPublisher()
+        public async Task<IActionResult> AddNewPublisher([FromBody] PublisherDataModel publisherItem)
         {
-            return Ok();
+            _logger.LogInformation("AddNewPublisher is called.");
+            Response<PublisherDataModel> response = new Response<PublisherDataModel>();
+            try
+            {
+                _logger.LogInformation("Publisher service is called.");
+                var watch = Stopwatch.StartNew();
+                // Service call
+                var result = await _profileService.AddNewPublisher(publisherItem);
+                watch.Stop();
+                _logger.LogInformation("Execution Time of Publisher service for GetPublisherById call is: {duration}ms", watch.ElapsedMilliseconds);
+                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                _logger.LogInformation("AddNewPublisher executed successfully.");
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                return BadRequest(response);
+            }
         }
 
 
@@ -127,7 +165,27 @@ namespace MarketPlaceService.API.Controllers
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Description = "Unexpected error")]
         public async Task<IActionResult> UpdatePublisher([FromBody] Guid id)
         {
-            return Ok();
+            _logger.LogInformation("UpdatePublisher is called.");
+            Response<PublisherDataModel> response = new Response<PublisherDataModel>();
+            try
+            {
+                _logger.LogInformation("Publisher service is called.");
+                var watch = Stopwatch.StartNew();
+                // Service call
+                var result = await _profileService.UpdatePublisher(id);
+                watch.Stop();
+                _logger.LogInformation("Execution Time of Publisher service for UpdatePublisher call is: {duration}ms", watch.ElapsedMilliseconds);
+                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                _logger.LogInformation("UpdatePublisher executed successfully.");
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                return BadRequest(response);
+            }
         }
 
 
@@ -143,7 +201,27 @@ namespace MarketPlaceService.API.Controllers
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Description = "Unexpected error")]
         public async Task<IActionResult> DeletePublisher([FromBody] Guid id)
         {
-            return Ok();
+            _logger.LogInformation("DeletePublisher is called.");
+            Response<PublisherDataModel> response = new Response<PublisherDataModel>();
+            try
+            {
+                _logger.LogInformation("Publisher service is called.");
+                var watch = Stopwatch.StartNew();
+                // Service call
+                var result = await _profileService.DeletePublisher(id);
+                watch.Stop();
+                _logger.LogInformation("Execution Time of Publisher service for DeletePublisher call is: {duration}ms", watch.ElapsedMilliseconds);
+                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                _logger.LogInformation("DeletePublisher executed successfully.");
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                return BadRequest(response);
+            }
         }
 
     }

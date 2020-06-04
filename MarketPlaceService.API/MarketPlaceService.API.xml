@@ -17,7 +17,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:MarketPlaceService.API.Controllers.ProfileController.AddNewPublisher">
+        <member name="M:MarketPlaceService.API.Controllers.ProfileController.AddNewPublisher(MarketPlaceService.Entities.PublisherDataModel)">
             <summary>
             Create new publisher
             </summary>
@@ -40,6 +40,19 @@
         <member name="M:MarketPlaceService.API.Controllers.SiteController.GetRegisteredSites">
             <summary>
             Get list of all publishers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.SiteController.GetSiteById(System.Guid)">
+            <summary>
+            Get specific publisher details by PublisherId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.SiteController.AddNewSite(MarketPlaceService.Entities.SiteDataModel)">
+            <summary>
+            Create new publisher
             </summary>
             <returns></returns>
         </member>

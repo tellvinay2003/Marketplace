@@ -9,11 +9,11 @@ namespace MarketPlaceService.DAL.MySql.Contract
 {
     public interface IPublisherRepository
     {
-        Task<PublisherDbEntity> AddNewPublisher(PublisherDbEntity publisher);
+        Task<PublisherDataModel> AddNewPublisher(PublisherDataModel publisher);
         Task<PublisherDataModel> GetPublisherByIdAsync(Guid id);
-        Task<bool> UpdateCarAsync(PublisherDbEntity publisher);
+        Task<bool> UpdateCarAsync(PublisherDataModel publisher);
         Task<bool> DeleteCarAsync(Guid id);
-        Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync(int pageNumber, int pageSize);
-        Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync();
+        Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync(int pageNumber, int pageSize);
+        Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync();
     }
 }

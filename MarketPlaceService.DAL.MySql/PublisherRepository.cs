@@ -12,7 +12,7 @@ namespace MarketPlaceService.DAL.MySql
 {
     public class PublisherRepository : IPublisherRepository, IHealthCheck
     {
-        public Task<PublisherDbEntity> AddNewPublisher(PublisherDbEntity publisher)
+        public Task<PublisherDataModel> AddNewPublisher(PublisherDataModel publisher)
         {
             throw new NotImplementedException();
         }
@@ -41,17 +41,17 @@ namespace MarketPlaceService.DAL.MySql
             return await Task.FromResult(publisherDataModel);
         }
 
-        public Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync(int pageNumber, int pageSize)
+        public Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync(int pageNumber, int pageSize)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<PublisherDbEntity>> GetPublishersListAsync()
+        public Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateCarAsync(PublisherDbEntity publisher)
+        public Task<bool> UpdateCarAsync(PublisherDataModel publisher)
         {
             throw new NotImplementedException();
         }

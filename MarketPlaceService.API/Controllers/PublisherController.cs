@@ -10,6 +10,7 @@ using MarketPlaceService.API.Models;
 using MarketPlaceService.BLL.Contracts;
 using MarketPlaceService.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -53,7 +54,17 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _profileService.GetPublishersListAsync();
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Publisher service for GetRegisteredPublishers call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<IEnumerable<PublisherDataModel>> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                
+                response = new Response<IEnumerable<PublisherDataModel>>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
+
+
                 _logger.LogInformation("GetRegisteredPublishers executed successfully.");
 
                 return Ok(response);
@@ -61,7 +72,14 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<IEnumerable<PublisherDataModel>> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<IEnumerable<PublisherDataModel>>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
+
                 return BadRequest(response);
             }
         }
@@ -88,6 +106,7 @@ namespace MarketPlaceService.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
+        [EnableCors("MyPolicy")]
         [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(PublisherDataModel), Description = "Returns finded Publisher")]
         [SwaggerResponse((int)HttpStatusCode.OK, Description = "Returns 200")]
         [SwaggerResponse((int)HttpStatusCode.BadRequest, Description = "Missing or invalid Publisher id")]
@@ -104,7 +123,14 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _profileService.GetPublisherById(id);
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Publisher service for GetPublisherById call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
                 _logger.LogInformation("GetPublisherById executed successfully.");
 
                 return Ok(response);
@@ -112,7 +138,13 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
                 return BadRequest(response);
             }
 
@@ -139,7 +171,14 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _profileService.AddNewPublisher(publisherItem);
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Publisher service for GetPublisherById call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
                 _logger.LogInformation("AddNewPublisher executed successfully.");
 
                 return Ok(response);
@@ -147,7 +186,13 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
                 return BadRequest(response);
             }
         }
@@ -175,7 +220,14 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _profileService.UpdatePublisher(id);
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Publisher service for UpdatePublisher call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
                 _logger.LogInformation("UpdatePublisher executed successfully.");
 
                 return Ok(response);
@@ -183,7 +235,13 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
                 return BadRequest(response);
             }
         }
@@ -211,7 +269,14 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _profileService.DeletePublisher(id);
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Publisher service for DeletePublisher call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
                 _logger.LogInformation("DeletePublisher executed successfully.");
 
                 return Ok(response);
@@ -219,7 +284,13 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<PublisherDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<PublisherDataModel>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
                 return BadRequest(response);
             }
         }

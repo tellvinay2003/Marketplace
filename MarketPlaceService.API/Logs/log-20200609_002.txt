@@ -1,0 +1,21 @@
+2020-06-09T18:43:00.3617992+05:30  [INF] User profile is available. Using '"C:\Users\vinay\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2020-06-09T18:43:00.5636360+05:30 8000002a-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger   (ca22a1cb)
+2020-06-09T18:43:00.8716100+05:30 8000002a-0002-fd00-b63f-84710c7967bb [INF] Request finished in 290.665ms 301  (791a596a)
+2020-06-09T18:43:00.9160074+05:30 8000002b-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-09T18:43:01.3052465+05:30 8000002b-0002-fd00-b63f-84710c7967bb [INF] Request finished in 371.8452ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-09T18:43:01.3406280+05:30 80000002-0001-fa00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2020-06-09T18:43:01.3444088+05:30 8000000c-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/swagger-ui.css   (ca22a1cb)
+2020-06-09T18:43:01.3586037+05:30 8000002c-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2020-06-09T18:43:01.4641686+05:30 8000000c-0001-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2020-06-09T18:43:01.5045132+05:30 8000000c-0001-fb00-b63f-84710c7967bb [INF] Request finished in 131.6896ms 200 text/css (791a596a)
+2020-06-09T18:43:01.5421892+05:30 80000002-0001-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2020-06-09T18:43:01.5732175+05:30 80000002-0001-fa00-b63f-84710c7967bb [INF] Request finished in 235.7269ms 200 application/javascript (791a596a)
+2020-06-09T18:43:01.6276267+05:30 8000002c-0002-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2020-06-09T18:43:01.6868774+05:30 8000002c-0002-fd00-b63f-84710c7967bb [INF] Request finished in 287.5564ms 200 application/javascript (791a596a)
+2020-06-09T18:43:02.3550916+05:30 8000002d-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-09T18:43:02.9227002+05:30 8000002d-0002-fd00-b63f-84710c7967bb [INF] Request finished in 594.1039ms 200 application/json;charset=utf-8 (791a596a)
+2020-06-09 19:06:50.012 +05:30 [Information] web api service is started.
+2020-06-09 19:36:29.466 +05:30 [Information] web api service is started.
+2020-06-09 19:37:15.678 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 2278.7300 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:""][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-09 19:37:19.124 +05:30 [Information] HTTP "GET" "/swagger/favicon-32x32.png" responded 200 in 213.6908 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-09 19:37:19.748 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 1463.6522 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]

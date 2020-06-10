@@ -90,6 +90,17 @@ namespace MarketPlaceService.API
                     .AllowCredentials());
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "MyPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000",
+                                            "http://www.contoso.com")
+                                .WithMethods("PUT", "DELETE", "GET");
+                    });
+            });
+
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen(opt =>
             {
@@ -111,25 +122,25 @@ namespace MarketPlaceService.API
                 opt.OperationFilter<SecurityRequirementsOperationFilter>();
             });
 
-            var key = Encoding.ASCII.GetBytes(appSettings.JwtSecretKey);
-            services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddCookie(cfg => { cfg.SlidingExpiration = true; })
-            .AddJwtBearer(x =>
-            {
-                x.RequireHttpsMetadata = false;
-                x.SaveToken = true;
-                x.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateAudience = false,
-                    ValidateIssuer = false,
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key)
-                };
-            });
+            //var key = Encoding.ASCII.GetBytes(appSettings.JwtSecretKey);
+            //services.AddAuthentication(x =>
+            //{
+            //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //})
+            //.AddCookie(cfg => { cfg.SlidingExpiration = true; })
+            //.AddJwtBearer(x =>
+            //{
+            //    x.RequireHttpsMetadata = false;
+            //    x.SaveToken = true;
+            //    x.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        ValidateAudience = false,
+            //        ValidateIssuer = false,
+            //        ValidateIssuerSigningKey = true,
+            //        IssuerSigningKey = new SymmetricSecurityKey(key)
+            //    };
+            //});
 
             services.AddSwaggerExamplesFromAssemblyOf<Program>();
 
@@ -140,11 +151,13 @@ namespace MarketPlaceService.API
             Log.Logger = logger.CreateLogger();
             Log.Information("web api service is started.");
 
+            // Service registration for resolving dependencies
             services.AddScoped<IProfileService, ProfileService>();
             services.AddScoped<ISiteService, SiteService>();
+            services.AddScoped<ISubscriberService, SubscriberService>();
 
 
-            // Dependency resolutuon for repositories
+            // Dependency resolution for repositories
             services.AddScoped<IPublisherRepository, PublisherRepository>();
             services.AddScoped<ISiteRepository, SiteRepository>();
         }

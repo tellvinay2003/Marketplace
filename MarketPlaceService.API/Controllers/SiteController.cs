@@ -33,7 +33,7 @@ namespace MarketPlaceService.API.Controllers
 
 
         /// <summary>
-        /// Get list of all publishers
+        /// Get list of all Sites
         /// </summary>
         /// <returns></returns>
         // [HttpGet("GetAll")]
@@ -52,7 +52,14 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _siteService.GetRegisteredSitesAsync();
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Site service for GetRegisteredSites call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<IEnumerable<SiteDataModel>> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                response = new Response<IEnumerable<SiteDataModel>>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
                 _logger.LogInformation("GetRegisteredSites executed successfully.");
 
                 return Ok(response);
@@ -60,14 +67,20 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<IEnumerable<SiteDataModel>> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<IEnumerable<SiteDataModel>>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
                 return BadRequest(response);
             }
         }
 
 
         /// <summary>
-        /// Get specific publisher details by PublisherId
+        /// Get specific Site details by Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -88,7 +101,14 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _siteService.GetSiteById(id);
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Site service for GetSiteById call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<SiteDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                response = new Response<SiteDataModel>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
                 _logger.LogInformation("GetSiteById executed successfully.");
 
                 return Ok(response);
@@ -96,7 +116,13 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<SiteDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<SiteDataModel>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
                 return BadRequest(response);
             }
 
@@ -104,10 +130,10 @@ namespace MarketPlaceService.API.Controllers
 
 
         /// <summary>
-        /// Create new publisher
+        /// Create new Site
         /// </summary>
         /// <returns></returns>
-        // [HttpPost("CreatePublisher")]
+        // [HttpPost("CreateSite")]
         [HttpPost("")]
         [SwaggerResponse((int)HttpStatusCode.OK, Description = "Returns 200")]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Description = "Unexpected error")]
@@ -123,7 +149,14 @@ namespace MarketPlaceService.API.Controllers
                 var result = await _siteService.AddNewSite(siteData);
                 watch.Stop();
                 _logger.LogInformation("Execution Time of Site service for AddNewSite call is: {duration}ms", watch.ElapsedMilliseconds);
-                response = new Response<SiteDataModel> { ResponseCode = (int)Code.success, ResponseMessage = result };
+                response = new Response<SiteDataModel>
+                {
+                    ResponseCode = (int)Code.success,
+                    Status = "Success",
+                    ResponseMessage = result,
+                    ExecutionTime = watch.ElapsedMilliseconds,
+                    TraceId = Guid.NewGuid()
+                };
                 _logger.LogInformation("AddNewSite executed successfully.");
 
                 return Ok(response);
@@ -131,7 +164,13 @@ namespace MarketPlaceService.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                response = new Response<SiteDataModel> { ResponseCode = (int)Code.exceptionError, Message = ex.ToString() };
+                response = new Response<SiteDataModel>
+                {
+                    ResponseCode = (int)Code.exceptionError,
+                    Status = "Failure",
+                    Message = ex.ToString(),
+                    TraceId = Guid.NewGuid()
+                };
                 return BadRequest(response);
             }
         }

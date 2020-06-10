@@ -39,20 +39,26 @@
         </member>
         <member name="M:MarketPlaceService.API.Controllers.SiteController.GetRegisteredSites">
             <summary>
-            Get list of all publishers
+            Get list of all Sites
             </summary>
             <returns></returns>
         </member>
         <member name="M:MarketPlaceService.API.Controllers.SiteController.GetSiteById(System.Guid)">
             <summary>
-            Get specific publisher details by PublisherId
+            Get specific Site details by Id
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:MarketPlaceService.API.Controllers.SiteController.AddNewSite(MarketPlaceService.Entities.SiteDataModel)">
             <summary>
-            Create new publisher
+            Create new Site
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MarketPlaceService.API.Controllers.SubscriberController.GetRegisteredSubscribers">
+            <summary>
+            Get list of all publishers
             </summary>
             <returns></returns>
         </member>

@@ -1,0 +1,8 @@
+2020-06-10T13:11:53.3001376+05:30 80000005-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-10T13:11:54.9388137+05:30 80000005-0000-fd00-b63f-84710c7967bb [INF] Request finished in 1524.4875ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-10T13:11:55.6661768+05:30 80000006-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-10T13:11:56.0901259+05:30 80000006-0000-fd00-b63f-84710c7967bb [INF] Request finished in 427.6257ms 200 application/json;charset=utf-8 (791a596a)
+2020-06-10 15:14:08.542 +05:30 [Information] web api service is started.
+2020-06-10 15:14:10.217 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 667.9262 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:""][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-10 15:14:11.361 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 628.3208 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-10 15:15:41.553 +05:30 [Information] HTTP "GET" "/api/v1/publisher/b3d27f9b-d21d-327c-164e-7fb6776f87b0" responded 200 in 573.0311 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]

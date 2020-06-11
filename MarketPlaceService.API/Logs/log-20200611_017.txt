@@ -1,0 +1,4 @@
+2020-06-11T16:39:48.1848003+05:30 80000019-0003-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-11T16:39:48.9978354+05:30 80000019-0003-fd00-b63f-84710c7967bb [INF] Request finished in 816.7331ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-11T16:39:49.3015763+05:30 8000001a-0003-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-11T16:39:49.8326800+05:30 8000001a-0003-fd00-b63f-84710c7967bb [INF] Request finished in 521.1263ms 200 application/json;charset=utf-8 (791a596a)

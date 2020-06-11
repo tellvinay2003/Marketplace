@@ -4,6 +4,7 @@ using MarketPlaceService.Entities;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,6 +13,12 @@ namespace MarketPlaceService.DAL.MySql
 {
     public class PublisherRepository : IPublisherRepository, IHealthCheck
     {
+        protected readonly MarketplaceDbContext _context;
+
+        public PublisherRepository(MarketplaceDbContext context)
+        {
+            _context = context;
+        }
         public Task<PublisherDataModel> AddNewPublisher(PublisherDataModel publisher)
         {
             throw new NotImplementedException();
@@ -22,20 +29,18 @@ namespace MarketPlaceService.DAL.MySql
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteCarAsync(Guid id)
+        public Task<bool> DeletePublisherAsync(Guid id)
         {
             throw new NotImplementedException();
         }
 
         public async Task<PublisherDataModel> GetPublisherByIdAsync(Guid id)
         {
+            // var result = _context.Publisher.Where(x => x.PublisherId == id).FirstOrDefault();
+
             PublisherDataModel publisherDataModel = new PublisherDataModel
             {
-                PublisherName = "Piblisher1",
-                Description = "Description",
-                ShortName = "Pub1",
-                PublisherId = Guid.NewGuid(),
-                StatusId = Guid.NewGuid()
+                // PublisherName = result.PublisherName,
             };
 
             return await Task.FromResult(publisherDataModel);
@@ -51,7 +56,7 @@ namespace MarketPlaceService.DAL.MySql
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateCarAsync(PublisherDataModel publisher)
+        public Task<bool> UpdatePublisherAsync(PublisherDataModel publisher)
         {
             throw new NotImplementedException();
         }

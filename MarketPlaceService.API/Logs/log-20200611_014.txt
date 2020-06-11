@@ -1,0 +1,98 @@
+2020-06-11T14:37:55.2978320+05:30 80000004-0003-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-11T14:37:56.4051611+05:30 80000004-0003-fe00-b63f-84710c7967bb [INF] Request finished in 1137.4935ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-11T14:37:56.8317487+05:30 80000005-0003-fe00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-11T14:37:57.4935944+05:30 80000005-0003-fe00-b63f-84710c7967bb [INF] Request finished in 524.3608ms 200 application/json;charset=utf-8 (791a596a)
+2020-06-11T14:41:01.0090080+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST http://localhost:51780/api/v1/site application/json 62 (ca22a1cb)
+2020-06-11T14:41:01.0609672+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] CORS policy execution failed. (09b6f179)
+2020-06-11T14:41:01.0729977+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Request origin "http://localhost:51780" does not have permission to access the resource. (a03d560b)
+2020-06-11T14:41:01.0780480+05:30 8000001e-0000-fd00-b63f-84710c7967bb [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2020-06-11T14:41:01.0861853+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MarketPlaceService.API.Controllers.SiteController.AddNewSite (MarketPlaceService.API)"' (500cc934)
+2020-06-11T14:41:01.1404348+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"AddNewSite\", controller = \"Site\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNewSite(MarketPlaceService.Entities.SiteDataModel)" on controller "MarketPlaceService.API.Controllers.SiteController" ("MarketPlaceService.API"). (122b2fdf)
+2020-06-11T14:41:14.8041105+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] GetSiteById is called. (cad15902)
+2020-06-11T14:41:16.4940973+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Site service is called. (bd8f6ee0)
+2020-06-11T14:41:19.8185757+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Repository call for GetPublisherById started (a40f5732)
+2020-06-11T14:48:52.2073212+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.4" initialized '"MarketplaceDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "CommandTimeout=120 " (9958f5bb)
+2020-06-11T14:48:55.8384786+05:30 8000001e-0000-fd00-b63f-84710c7967bb [ERR] An error occurred using the connection to database '"carsdb"' on server '"localhost"'. (5fc3407c)
+2020-06-11T14:48:56.1141672+05:30 8000001e-0000-fd00-b63f-84710c7967bb [ERR] An exception occurred in the database while saving changes for context type '"MarketPlaceService.DAL.MySql.Models.MarketplaceDbContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'carsUser'.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ClientConnectionId:b25edacd-b589-4407-8bec-0a7dce04ba3c
+Error Number:18456,State:1,Class:14" (170f029e)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'carsUser'.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at MarketPlaceService.DAL.MySql.SiteRepository.AddNewSite(SiteDataModel siteData) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.DAL.MySql\SiteRepository.cs:line 32
+   at MarketPlaceService.BLL.SiteService.AddNewSite(SiteDataModel siteData) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.BLL\SiteService.cs:line 29
+   at MarketPlaceService.API.Controllers.SiteController.AddNewSite(SiteDataModel siteData) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.API\Controllers\SiteController.cs:line 149
+ClientConnectionId:b25edacd-b589-4407-8bec-0a7dce04ba3c
+Error Number:18456,State:1,Class:14
+2020-06-11T14:48:56.6081780+05:30 8000001e-0000-fd00-b63f-84710c7967bb [ERR] Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'carsUser'.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at MarketPlaceService.DAL.MySql.SiteRepository.AddNewSite(SiteDataModel siteData) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.DAL.MySql\SiteRepository.cs:line 32
+   at MarketPlaceService.BLL.SiteService.AddNewSite(SiteDataModel siteData) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.BLL\SiteService.cs:line 29
+   at MarketPlaceService.API.Controllers.SiteController.AddNewSite(SiteDataModel siteData) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.API\Controllers\SiteController.cs:line 149
+ClientConnectionId:b25edacd-b589-4407-8bec-0a7dce04ba3c
+Error Number:18456,State:1,Class:14 (46bfefbb)
+2020-06-11T14:48:56.6547510+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"MarketPlaceService.API.CustomEntities.Response`1[[MarketPlaceService.Entities.SiteDataModel, MarketPlaceService.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-06-11T14:48:56.7637230+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Executed action "MarketPlaceService.API.Controllers.SiteController.AddNewSite (MarketPlaceService.API)" in 475610.4055ms (afa2e885)
+2020-06-11T14:48:56.7675789+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MarketPlaceService.API.Controllers.SiteController.AddNewSite (MarketPlaceService.API)"' (99874f2b)
+2020-06-11T14:48:56.8725005+05:30 8000001e-0000-fd00-b63f-84710c7967bb [INF] Request finished in 475866.4921ms 400 application/json; charset=utf-8 (791a596a)
+2020-06-11 15:45:21.267 +05:30 [Information] web api service is started.
+2020-06-11 15:45:24.003 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 997.6631 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:""][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-11 15:45:25.569 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 538.8904 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-11 15:46:41.878 +05:30 [Information] HTTP "POST" "/api/v1/site" responded 200 in 30750.7463 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-11 15:48:13.175 +05:30 [Information] HTTP "POST" "/api/v1/site" responded 200 in 2184.6508 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-11 15:50:43.775 +05:30 [Information] HTTP "POST" "/api/v1/site" responded 200 in 20683.3223 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]

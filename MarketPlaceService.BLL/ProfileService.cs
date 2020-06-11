@@ -21,9 +21,14 @@ namespace MarketPlaceService.BLL
             _logger = logger;
         }
 
-        public Task<PublisherDataModel> AddNewPublisher(PublisherDataModel publisherItem)
+        public async Task<PublisherDataModel> AddNewPublisher(PublisherDataModel publisherItem)
         {
-            throw new NotImplementedException();
+            _logger.LogInformation("Repository call for AddNewPublisher started");
+            var watch = Stopwatch.StartNew();
+            var result = await _publisherRepository.AddNewPublisher(publisherItem);
+            watch.Stop();
+            _logger.LogInformation("Execution Time of AddNewPublisher repository call is: {duration}ms", watch.ElapsedMilliseconds);
+            return result;
         }
 
         public Task<PublisherDataModel> DeletePublisher(Guid id)

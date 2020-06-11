@@ -11,8 +11,8 @@ namespace MarketPlaceService.DAL.MySql.Contract
     {
         Task<PublisherDataModel> AddNewPublisher(PublisherDataModel publisher);
         Task<PublisherDataModel> GetPublisherByIdAsync(Guid id);
-        Task<bool> UpdateCarAsync(PublisherDataModel publisher);
-        Task<bool> DeleteCarAsync(Guid id);
+        Task<bool> UpdatePublisherAsync(PublisherDataModel publisher);
+        Task<bool> DeletePublisherAsync(Guid id);
         Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync(int pageNumber, int pageSize);
         Task<IEnumerable<PublisherDataModel>> GetPublishersListAsync();
     }

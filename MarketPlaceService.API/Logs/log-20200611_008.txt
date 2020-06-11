@@ -1,0 +1,78 @@
+2020-06-11T13:13:15.3988825+05:30 80000007-0003-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-11T13:13:16.0033547+05:30 80000007-0003-fd00-b63f-84710c7967bb [INF] Request finished in 613.4805ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-11T13:13:16.3078644+05:30 80000008-0003-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-11T13:13:16.8007297+05:30 80000008-0003-fd00-b63f-84710c7967bb [INF] Request finished in 492.7875ms 200 application/json;charset=utf-8 (791a596a)
+2020-06-11T13:13:24.3728253+05:30 80000009-0003-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/api/v1/publisher/11   (ca22a1cb)
+2020-06-11T13:13:24.5229766+05:30 80000009-0003-fd00-b63f-84710c7967bb [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2020-06-11T13:13:24.5620097+05:30 80000009-0003-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MarketPlaceService.API.Controllers.PublisherController.GetPublisherById (MarketPlaceService.API)"' (500cc934)
+2020-06-11T13:13:24.7141893+05:30 80000009-0003-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetPublisherById\", controller = \"Publisher\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPublisherById(Int32)" on controller "MarketPlaceService.API.Controllers.PublisherController" ("MarketPlaceService.API"). (122b2fdf)
+2020-06-11T13:13:24.7593010+05:30 80000009-0003-fd00-b63f-84710c7967bb [INF] Executed action "MarketPlaceService.API.Controllers.PublisherController.GetPublisherById (MarketPlaceService.API)" in 9.3608ms (afa2e885)
+2020-06-11T13:13:24.7716046+05:30 80000009-0003-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MarketPlaceService.API.Controllers.PublisherController.GetPublisherById (MarketPlaceService.API)"' (99874f2b)
+2020-06-11T13:13:25.0270280+05:30 80000009-0003-fd00-b63f-84710c7967bb [INF] Request finished in 658.9396ms 500 application/json (791a596a)
+2020-06-11T13:13:42.0186812+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 DELETE http://localhost:51780/api/v1/publisher/11 application/json  (ca22a1cb)
+2020-06-11T13:13:42.0567646+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] CORS policy execution failed. (09b6f179)
+2020-06-11T13:13:42.0710238+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] Request origin "http://localhost:51780" does not have permission to access the resource. (a03d560b)
+2020-06-11T13:13:42.1182462+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MarketPlaceService.API.Controllers.PublisherController.DeletePublisher (MarketPlaceService.API)"' (500cc934)
+2020-06-11T13:13:42.1477135+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"DeletePublisher\", controller = \"Publisher\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePublisher(Int32)" on controller "MarketPlaceService.API.Controllers.PublisherController" ("MarketPlaceService.API"). (122b2fdf)
+2020-06-11T13:13:42.1577767+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] Executed action "MarketPlaceService.API.Controllers.PublisherController.DeletePublisher (MarketPlaceService.API)" in 2.8977ms (afa2e885)
+2020-06-11T13:13:42.1680510+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MarketPlaceService.API.Controllers.PublisherController.DeletePublisher (MarketPlaceService.API)"' (99874f2b)
+2020-06-11T13:13:42.2388844+05:30 8000000a-0003-fd00-b63f-84710c7967bb [INF] Request finished in 249.9183ms 500 application/json (791a596a)
+2020-06-11 13:15:55.970 +05:30 [Information] web api service is started.
+2020-06-11 13:16:49.256 +05:30 [Information] web api service is started.
+2020-06-11 13:16:50.962 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 551.6381 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:""][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-11 13:16:51.982 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 567.2027 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-11 13:17:19.512 +05:30 [Error] HTTP "GET" "/api/Publishers/1" responded 500 in 420.8200 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Headers:[("Accept": "text/plain"), ("Accept-Encoding": "gzip, deflate, br"), ("Accept-Language": "en-US,en;q=0.9"), ("Connection": "keep-alive"), ("Host": "localhost:51780"), ("Referer": "http://localhost:51780/swagger/index.html"), ("User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"), ("Sec-Fetch-Site": "same-origin"), ("Sec-Fetch-Mode": "cors"), ("Sec-Fetch-Dest": "empty")]]
+System.InvalidOperationException: Unable to resolve service for type 'MarketPlaceService.DAL.MySql.Models.MarketplaceDbContext' while attempting to activate 'MarketPlaceService.API.Controllers.V0.PublishersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at MarketPlaceService.API.Middleware.HttpContextMiddleware.Invoke(HttpContext httpContext) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.API\Middlewares\HttpContextMiddleware.cs:line 40
+2020-06-11 13:20:32.125 +05:30 [Error] HTTP "PUT" "/api/Publishers/1" responded 500 in 177.0449 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Headers:[("Accept": "*/*"), ("Accept-Encoding": "gzip, deflate, br"), ("Accept-Language": "en-US,en;q=0.9"), ("Connection": "keep-alive"), ("Content-Length": "1990"), ("Content-Type": "application/json"), ("Host": "localhost:51780"), ("Referer": "http://localhost:51780/swagger/index.html"), ("User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"), ("Origin": "http://localhost:51780"), ("Sec-Fetch-Site": "same-origin"), ("Sec-Fetch-Mode": "cors"), ("Sec-Fetch-Dest": "empty")]]
+System.InvalidOperationException: Unable to resolve service for type 'MarketPlaceService.DAL.MySql.Models.MarketplaceDbContext' while attempting to activate 'MarketPlaceService.API.Controllers.V0.PublishersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at MarketPlaceService.API.Middleware.HttpContextMiddleware.Invoke(HttpContext httpContext) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.API\Middlewares\HttpContextMiddleware.cs:line 40
+2020-06-11 13:20:56.194 +05:30 [Error] HTTP "GET" "/api/Publishers/1" responded 500 in 101.1782 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Headers:[("Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"), ("Accept-Encoding": "gzip, deflate, br"), ("Accept-Language": "en-US,en;q=0.9"), ("Connection": "keep-alive"), ("Host": "localhost:51780"), ("User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"), ("Upgrade-Insecure-Requests": "1"), ("Sec-Fetch-Site": "none"), ("Sec-Fetch-Mode": "navigate"), ("Sec-Fetch-Dest": "document")]]
+System.InvalidOperationException: Unable to resolve service for type 'MarketPlaceService.DAL.MySql.Models.MarketplaceDbContext' while attempting to activate 'MarketPlaceService.API.Controllers.V0.PublishersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at MarketPlaceService.API.Middleware.HttpContextMiddleware.Invoke(HttpContext httpContext) in D:\MarketPlace\Project\MarketPlaceService\MarketPlaceService.API\Middlewares\HttpContextMiddleware.cs:line 40
+2020-06-11 13:20:56.379 +05:30 [Information] HTTP "GET" "/favicon.ico" responded 404 in 0.9426 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/api/Publishers/1"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]

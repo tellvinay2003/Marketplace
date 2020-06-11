@@ -29,16 +29,18 @@ using MarketPlaceService.BLL.Contracts;
 using MarketPlaceService.BLL;
 using MarketPlaceService.DAL.MySql;
 using MarketPlaceService.DAL.MySql.Contract;
+using MarketPlaceService.DAL.MySql.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MarketPlaceService.API
 {
     public class Startup
     {
         private readonly ILogger<Startup> _logger;
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
         private readonly ObjectPoolProvider _objectPoolProvider;
 
-        public Startup(IConfiguration configuration, ILogger<Startup> logger, IHostingEnvironment env, ObjectPoolProvider objectPoolProvider)
+        public Startup(IConfiguration configuration, ILogger<Startup> logger, IWebHostEnvironment env, ObjectPoolProvider objectPoolProvider)
         {
             Configuration = configuration;
             _logger = logger;
@@ -151,6 +153,10 @@ namespace MarketPlaceService.API
             Log.Logger = logger.CreateLogger();
             Log.Information("web api service is started.");
 
+
+            services.AddDbContext<MarketplaceDbContext>(options =>
+           options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), sqlServerOptions => sqlServerOptions.CommandTimeout(120)));
+
             // Service registration for resolving dependencies
             services.AddScoped<IProfileService, ProfileService>();
             services.AddScoped<ISiteService, SiteService>();
@@ -159,6 +165,7 @@ namespace MarketPlaceService.API
 
             // Dependency resolution for repositories
             services.AddScoped<IPublisherRepository, PublisherRepository>();
+            services.AddScoped<ISubscriberRepository, SubscriberRepository>();
             services.AddScoped<ISiteRepository, SiteRepository>();
         }
 

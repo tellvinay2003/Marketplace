@@ -137,7 +137,7 @@ namespace MarketPlaceService.API.Controllers
         [HttpPost("")]
         [SwaggerResponse((int)HttpStatusCode.OK, Description = "Returns 200")]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Description = "Unexpected error")]
-        public async Task<IActionResult> AddNewSite([FromBody] SiteDataModel siteData)
+        public async Task<IActionResult> AddNewSite(SiteDataModel siteData)
         {
             _logger.LogInformation("GetSiteById is called.");
             Response<SiteDataModel> response = new Response<SiteDataModel>();

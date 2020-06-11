@@ -1,4 +1,5 @@
-﻿using MarketPlaceService.Entities;
+﻿using MarketPlaceService.DAL.MySql.Models;
+using MarketPlaceService.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -8,7 +8,7 @@ namespace MarketPlaceService.Entities
     {
         public Guid SiteId { get; set; }
         public string SiteName { get; set; }
-
-        public string IntegrationUrl { get; set; }
+        public string Url { get; set; }
+        public bool Enabled { get; set; }
     }
 }

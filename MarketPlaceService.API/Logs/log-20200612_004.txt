@@ -1,0 +1,29 @@
+2020-06-12T00:40:58.6627917+05:30 80000003-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-12T00:40:59.3856762+05:30 80000003-0000-fc00-b63f-84710c7967bb [INF] Request finished in 727.5206ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-12T00:40:59.6339425+05:30 80000004-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-12T00:41:00.1325781+05:30 80000004-0000-fc00-b63f-84710c7967bb [INF] Request finished in 490.4557ms 200 application/json;charset=utf-8 (791a596a)
+2020-06-12T00:41:24.3033547+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 POST http://localhost:51780/api/v1/site application/json 71 (ca22a1cb)
+2020-06-12T00:41:24.4045420+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] CORS policy execution failed. (09b6f179)
+2020-06-12T00:41:24.4259716+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Request origin "http://localhost:51780" does not have permission to access the resource. (a03d560b)
+2020-06-12T00:41:24.4374444+05:30 80000005-0000-fc00-b63f-84710c7967bb [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2020-06-12T00:41:24.4729670+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Executing endpoint '"MarketPlaceService.API.Controllers.SiteController.AddNewSite (MarketPlaceService.API)"' (500cc934)
+2020-06-12T00:41:24.6637324+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"AddNewSite\", controller = \"Site\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNewSite(MarketPlaceService.Entities.SiteDataModel)" on controller "MarketPlaceService.API.Controllers.SiteController" ("MarketPlaceService.API"). (122b2fdf)
+2020-06-12T00:41:27.8382727+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] GetSiteById is called. (cad15902)
+2020-06-12T00:41:29.3220657+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Site service is called. (bd8f6ee0)
+2020-06-12T00:41:32.3694760+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Repository call for GetPublisherById started (a40f5732)
+2020-06-12T00:41:39.2942966+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.4" initialized '"MarketplaceDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "CommandTimeout=120 " (9958f5bb)
+2020-06-12T00:41:44.2972176+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("253"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?' (Size = 50), @p3='?' (Size = 250)"], CommandType='Text', CommandTimeout='120']"
+""SET NOCOUNT ON;
+INSERT INTO [Site] ([SiteId], [Enabled], [SiteName], [Url])
+VALUES (@p0, @p1, @p2, @p3);" (0723d8ff)
+2020-06-12T00:41:46.4603713+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Execution Time of GetPublisherById repository call is: 13559ms (97137dd3)
+2020-06-12T00:41:46.4668217+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Execution Time of Site service for AddNewSite call is: 16778ms (5e0e5d88)
+2020-06-12T00:41:46.4760448+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] AddNewSite executed successfully. (68d0a7b5)
+2020-06-12T00:41:46.5169624+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"MarketPlaceService.API.CustomEntities.Response`1[[MarketPlaceService.Entities.SiteDataModel, MarketPlaceService.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-06-12T00:41:46.6231705+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Executed action "MarketPlaceService.API.Controllers.SiteController.AddNewSite (MarketPlaceService.API)" in 21911.8627ms (afa2e885)
+2020-06-12T00:41:46.6339426+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Executed endpoint '"MarketPlaceService.API.Controllers.SiteController.AddNewSite (MarketPlaceService.API)"' (99874f2b)
+2020-06-12T00:41:46.6655573+05:30 80000005-0000-fc00-b63f-84710c7967bb [INF] Request finished in 22363.4176ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-12 00:43:35.911 +05:30 [Information] web api service is started.
+2020-06-12 00:43:36.894 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 395.4623 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:""][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-12 00:43:37.609 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 347.4851 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-12 00:44:09.937 +05:30 [Information] HTTP "POST" "/api/v1/site" responded 200 in 7043.5039 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]

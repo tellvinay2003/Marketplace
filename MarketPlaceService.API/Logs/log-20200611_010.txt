@@ -1,0 +1,20 @@
+2020-06-11T13:25:09.2819951+05:30 80000006-0002-eb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/index.html   (ca22a1cb)
+2020-06-11T13:25:10.2632753+05:30 80000006-0002-eb00-b63f-84710c7967bb [INF] Request finished in 939.2545ms 200 text/html;charset=utf-8 (791a596a)
+2020-06-11T13:25:10.7876871+05:30 80000007-0002-eb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/swagger/v1/swagger.json   (ca22a1cb)
+2020-06-11T13:25:11.4619560+05:30 80000007-0002-eb00-b63f-84710c7967bb [INF] Request finished in 704.9193ms 200 application/json;charset=utf-8 (791a596a)
+2020-06-11T13:25:30.3780935+05:30 80000008-0002-eb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/api/v1/publisher/11   (ca22a1cb)
+2020-06-11T13:25:30.4594657+05:30 80000008-0002-eb00-b63f-84710c7967bb [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2020-06-11T13:25:30.5024888+05:30 80000008-0002-eb00-b63f-84710c7967bb [INF] Executing endpoint '"MarketPlaceService.API.Controllers.PublisherController.GetPublisherById (MarketPlaceService.API)"' (500cc934)
+2020-06-11T13:25:30.6227906+05:30 80000008-0002-eb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetPublisherById\", controller = \"Publisher\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPublisherById(Int32)" on controller "MarketPlaceService.API.Controllers.PublisherController" ("MarketPlaceService.API"). (122b2fdf)
+2020-06-11T13:25:30.6499152+05:30 80000008-0002-eb00-b63f-84710c7967bb [INF] Executed action "MarketPlaceService.API.Controllers.PublisherController.GetPublisherById (MarketPlaceService.API)" in 4.9468ms (afa2e885)
+2020-06-11T13:25:30.6558939+05:30 80000008-0002-eb00-b63f-84710c7967bb [INF] Executed endpoint '"MarketPlaceService.API.Controllers.PublisherController.GetPublisherById (MarketPlaceService.API)"' (99874f2b)
+2020-06-11T13:25:30.8248743+05:30 80000008-0002-eb00-b63f-84710c7967bb [INF] Request finished in 437.0035ms 500 application/json (791a596a)
+2020-06-11T13:26:57.2457548+05:30 80000009-0002-eb00-b63f-84710c7967bb [INF] Request starting HTTP/1.1 GET http://localhost:51780/api/v1/site   (ca22a1cb)
+2020-06-11T13:26:57.3011251+05:30 80000009-0002-eb00-b63f-84710c7967bb [INF] Executing endpoint '"MarketPlaceService.API.Controllers.SiteController.GetRegisteredSites (MarketPlaceService.API)"' (500cc934)
+2020-06-11T13:26:57.3250293+05:30 80000009-0002-eb00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetRegisteredSites\", controller = \"Site\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredSites()" on controller "MarketPlaceService.API.Controllers.SiteController" ("MarketPlaceService.API"). (122b2fdf)
+2020-06-11T13:26:57.3352851+05:30 80000009-0002-eb00-b63f-84710c7967bb [INF] Executed action "MarketPlaceService.API.Controllers.SiteController.GetRegisteredSites (MarketPlaceService.API)" in 2.9605ms (afa2e885)
+2020-06-11T13:26:57.3469299+05:30 80000009-0002-eb00-b63f-84710c7967bb [INF] Executed endpoint '"MarketPlaceService.API.Controllers.SiteController.GetRegisteredSites (MarketPlaceService.API)"' (99874f2b)
+2020-06-11T13:26:57.4065440+05:30 80000009-0002-eb00-b63f-84710c7967bb [INF] Request finished in 164.3722ms 500 application/json (791a596a)
+2020-06-11 13:29:08.028 +05:30 [Information] web api service is started.
+2020-06-11 13:29:09.057 +05:30 [Information] HTTP "GET" "/swagger/index.html" responded 200 in 382.3008 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:""][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
+2020-06-11 13:29:10.026 +05:30 [Information] HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 558.5311 ms [User:"unknown"][Protocol:"HTTP/1.1"][Host:"localhost:51780"][Referer:"http://localhost:51780/swagger/index.html"][User-Agent:"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"]
